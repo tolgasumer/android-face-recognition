@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/optionsbackground">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/managebtn"
+        android:text="Manage Persons"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:onClick="manageButtonClick"
+        android:background="@color/material_deep_teal_200"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stablebtn"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/material_deep_teal_200"
+        android:onClick="stableButtonClick"
+        android:text="DÜLDÜL'S STABLE"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/managebtn"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:id="@+id/textview1"/>
+
+
+
+</RelativeLayout>

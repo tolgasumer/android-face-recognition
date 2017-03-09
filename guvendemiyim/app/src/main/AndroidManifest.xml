@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.admin.tolga.face.proje" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.admin.tolga.face.proje.helper.SampleApp"
+        android:allowBackup="true"
+        android:icon="@drawable/saloonicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.admin.tolga.face.proje.ui.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.ui.IdentificationActivity"
+            android:label="@string/identification"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.ui.SelectImageActivity"
+            android:label="@string/select_an_image"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.admin.tolga.face.proje.persongroupmanagement.PersonGroupListActivity"
+            android:label="@string/person_group_list"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.IdentificationActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.IdentificationActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.persongroupmanagement.PersonGroupActivity"
+            android:label="@string/person_group"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustNothing"
+            android:parentActivityName="com.admin.tolga.face.proje.persongroupmanagement.PersonGroupListActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.persongroupmanagement.PersonGroupListActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.persongroupmanagement.PersonActivity"
+            android:label="@string/person"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustNothing"
+            android:parentActivityName="com.admin.tolga.face.proje.persongroupmanagement.PersonGroupActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.persongroupmanagement.PersonGroupActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.persongroupmanagement.AddFaceToPersonActivity"
+            android:label="@string/add_face_to_person"
+            android:parentActivityName="com.admin.tolga.face.proje.persongroupmanagement.PersonActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.persongroupmanagement.PersonActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.log.DetectionLogActivity"
+            android:label="@string/detection_log"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.DetectionActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.DetectionActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.log.VerificationLogActivity"
+            android:label="@string/verification_log"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.FaceVerificationActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.FaceVerificationActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.log.FindSimilarFaceLogActivity"
+            android:label="@string/find_similar_face_log"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.FindSimilarFaceActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.FindSimilarFaceActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.log.GroupingLogActivity"
+            android:label="@string/grouping_log"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.GroupingActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.GroupingActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.log.IdentificationLogActivity"
+            android:label="@string/identification_log"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.IdentificationActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.IdentificationActivity" />
+        </activity>
+        <activity android:name="com.admin.tolga.face.proje.ui.OptionsActivity"></activity>
+        <activity android:name="com.admin.tolga.face.proje.ui.AccessDeniedActivity"></activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.ui.StableActivity"
+            android:label="DÜLDÜL'S STABLE">
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.ui.FindSimilarFaceActivity"
+            android:label="@string/find_similar_faces"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.StableActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.StableActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.ui.GroupingActivity"
+            android:label="@string/grouping"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.StableActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.StableActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.ui.PersonVerificationActivity"
+            android:label="@string/person_verification"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.VerificationMenuActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.StableActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.ui.FaceVerificationActivity"
+            android:label="@string/face_verification"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.VerificationMenuActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.StableActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.ui.DetectionActivity"
+            android:label="@string/detection"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.StableActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.admin.tolga.face.proje.ui.StableActivity" />
+        </activity>
+        <activity
+            android:name="com.admin.tolga.face.proje.ui.VerificationMenuActivity"
+            android:label="@string/verification"
+            android:parentActivityName="com.admin.tolga.face.proje.ui.StableActivity"
+            android:screenOrientation="portrait" />
+
+
+
+
+
+    </application>
+
+</manifest>
